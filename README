@@ -1,1 +1,17 @@
+For this project, a program was created that could be loaded on to an MSP430 processor to create a 'parking sensor.'  
+For this purpose, timers, I/O pin modulation, for and while loops, and if else statements were used.  The I/O pin 
+modulation worked on a row of 6 LEDs; three green, two yellow, and one red, in that order.  The ultrasonic sensor
+detects the distance of objects within a range of 32 to 4 cm and relays this information to the MSP430. The processor 
+then uses this information to light up the LEDs accordingly.
 
+To construct the circuit for this MSP430 parking sensor the following parts must be acquired: a breadboard, an 
+MSP430G2553 processor chip, an HC-SR04 Ultrasonic Sensor, 3 green LEDs, 2 yellow LEDs, 1 red LED, 6 1000 ohm 
+resistors, and connectors and jumpers of various lengths. First, the chip is installed on the breadboard and each 
+required I/O pin is connected to the anode of its corresponding LED; P1.3 is connected to green LED 1, P2.0 is 
+connected to green LED 2, P2.3 is connected to green LED 3, P2.4 is connected to yellow LED 1, P2.5 is connected 
+to yellow LED 2, and finally P2.7 is connected to the red LED. The cathode sides of all 6 LEDs are connected to 
+ground using 6 1000 ohm resistors to limit current flow.  Next, the HC-SR04 is installed on the circuit with the 
+sensing side pointing away from the LEDs and wiring. The ECHO pin of the sensor is then routed to P1.1 of the 
+processor, while the TRIG pin is routed to P1.2. Finally, a 5V power source must be obtained, and the Vcc pins of
+both the processor and the ultrasonic sensor connected to 5V, with their ground pins connected to ground. Once 
+power is applied to the constructed circuit, the parking sensor will automatically power up and be ready for use.
